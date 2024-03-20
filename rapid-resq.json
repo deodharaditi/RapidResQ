@@ -1,0 +1,679 @@
+{
+  "business.EcoSystem": {
+    "workQueue": {
+      "workRequestList": [
+        ""
+      ]
+    },
+    "employeeDirectory": {
+      "employeeList": [
+        ""
+      ]
+    },
+    "userAccountDirectory": [
+      {
+        "@defined-in": "business.Organization.Organization",
+        "userAccountList": [
+          ""
+        ]
+      },
+      {
+        "userAccountList": [
+          {
+            "business.UserAccount.UserAccount": [
+              {
+                "username": "sysadmin",
+                "password": "sysadmin",
+                "enterprise": {
+                  "@class": "business.Enterprise.ManagementEnt",
+                  "name": "Management Unit",
+                  "workQueue": {
+                    "workRequestList": [
+                      ""
+                    ]
+                  },
+                  "employeeDirectory": {
+                    "employeeList": [
+                      ""
+                    ]
+                  },
+                  "userAccountDirectory": {
+                    "userAccountList": [
+                      ""
+                    ]
+                  },
+                  "organizationID": 10,
+                  "enterpriseType": "ManagementEnt",
+                  "organizationDirectory": {
+                    "organizationList": [
+                      ""
+                    ]
+                  }
+                },
+                "role": {
+                  "@class": "business.Role.SystemAdminRole"
+                },
+                "workQueue": {
+                  "workRequestList": [
+                    ""
+                  ]
+                }
+              },
+              {
+                "username": "rec",
+                "password": "rec",
+                "enterprise": {
+                  "@class": "business.Enterprise.ManagementEnt",
+                  "@reference": "../../business.UserAccount.UserAccount/enterprise"
+                },
+                "role": {
+                  "@class": "business.Role.ReceptionistRole"
+                },
+                "workQueue": {
+                  "workRequestList": [
+                    ""
+                  ]
+                }
+              },
+              {
+                "username": "doc",
+                "password": "doc",
+                "enterprise": {
+                  "@class": "business.Enterprise.ManagementEnt",
+                  "@reference": "../../business.UserAccount.UserAccount/enterprise"
+                },
+                "role": {
+                  "@class": "business.Role.DoctorRole"
+                },
+                "workQueue": {
+                  "workRequestList": [
+                    {
+                      "business.WorkQueue.LabTestWorkRequest": {
+                        "message": "Hello",
+                        "sender": {
+                          "@reference": "../../../.."
+                        },
+                        "requestDate": "2023-12-16 19:31:36.596 UTC",
+                        "LabTestRequestId": "LR822",
+                        "patient": {
+                          "patientId": 1,
+                          "patientName": "John Doe",
+                          "age": 18,
+                          "Gender": "M",
+                          "doctor": "Doctor A",
+                          "emailAddress": "joe@hotmail.com",
+                          "address": "park street",
+                          "userName": "john",
+                          "phoneNumber": "102-203-9870",
+                          "bloodGrp": "O+",
+                          "prescriptionlist": {
+                            "prescriptionList": [
+                              {
+                                "business.Medication.Prescription": {
+                                  "NoofTimesInaday": 0,
+                                  "totalDays": 0
+                                }
+                              }
+                            ]
+                          },
+                          "location": "NYC",
+                          "vitalSignsHistory": {
+                            "history": [
+                              {
+                                "business.VitalSigns.VitalSigns": {
+                                  "respiratoryRate": 23,
+                                  "bloodPressure": 102,
+                                  "weight": 45,
+                                  "heartRate": 99
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "doctor": {
+                          "age": 0,
+                          "qualification": "MD",
+                          "specilizationName": "Heart Surgeon",
+                          "DocName": "Doctor A",
+                          "emergencyDoctor": true,
+                          "username": "doc"
+                        },
+                        "labTestAdminFeedback": "bye",
+                        "requestdate": "2023-12-16 19:31:36.597 UTC",
+                        "status": "Requested",
+                        "min": 100,
+                        "max": 999
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "username": "john",
+                "password": "john",
+                "enterprise": {
+                  "@class": "business.Enterprise.ManagementEnt",
+                  "@reference": "../../business.UserAccount.UserAccount/enterprise"
+                },
+                "role": {
+                  "@class": "business.Role.PatientRole"
+                },
+                "workQueue": {
+                  "workRequestList": [
+                    ""
+                  ]
+                }
+              },
+              {
+                "username": "bob",
+                "password": "bob",
+                "enterprise": {
+                  "@class": "business.Enterprise.EquipmentEnt",
+                  "name": "Equipment Unit",
+                  "workQueue": {
+                    "workRequestList": [
+                      ""
+                    ]
+                  },
+                  "employeeDirectory": {
+                    "employeeList": [
+                      ""
+                    ]
+                  },
+                  "userAccountDirectory": {
+                    "userAccountList": [
+                      ""
+                    ]
+                  },
+                  "organizationID": 11,
+                  "enterpriseType": "EquipmentEnt",
+                  "organizationDirectory": {
+                    "organizationList": [
+                      ""
+                    ]
+                  }
+                },
+                "role": {
+                  "@class": "business.Role.EquipmentAdminRole"
+                },
+                "workQueue": {
+                  "workRequestList": [
+                    ""
+                  ]
+                }
+              },
+              {
+                "username": "lab",
+                "password": "lab",
+                "enterprise": {
+                  "@class": "business.Enterprise.MedicineEnt",
+                  "name": "Medicine Unit",
+                  "workQueue": {
+                    "workRequestList": [
+                      ""
+                    ]
+                  },
+                  "employeeDirectory": {
+                    "employeeList": [
+                      ""
+                    ]
+                  },
+                  "userAccountDirectory": {
+                    "userAccountList": [
+                      ""
+                    ]
+                  },
+                  "organizationID": 13,
+                  "enterpriseType": "MedicineEnt",
+                  "organizationDirectory": {
+                    "organizationList": [
+                      ""
+                    ]
+                  }
+                },
+                "role": {
+                  "@class": "business.Role.LabAssistantRole"
+                },
+                "workQueue": {
+                  "workRequestList": [
+                    ""
+                  ]
+                }
+              },
+              {
+                "username": "med",
+                "password": "med",
+                "enterprise": {
+                  "@class": "business.Enterprise.MedicineEnt",
+                  "@reference": "../../business.UserAccount.UserAccount[6]/enterprise"
+                },
+                "role": {
+                  "@class": "business.Role.MedicineAdminRole"
+                },
+                "workQueue": {
+                  "workRequestList": [
+                    ""
+                  ]
+                }
+              },
+              {
+                "username": "amb",
+                "password": "amb",
+                "enterprise": {
+                  "@class": "business.Enterprise.EmergencyEnt",
+                  "name": "Emergency Unit",
+                  "workQueue": {
+                    "workRequestList": [
+                      ""
+                    ]
+                  },
+                  "employeeDirectory": {
+                    "employeeList": [
+                      ""
+                    ]
+                  },
+                  "userAccountDirectory": {
+                    "userAccountList": [
+                      ""
+                    ]
+                  },
+                  "organizationID": 12,
+                  "enterpriseType": "EmergencyEnt",
+                  "organizationDirectory": {
+                    "organizationList": [
+                      ""
+                    ]
+                  }
+                },
+                "role": {
+                  "@class": "business.Role.AmbulanceRole"
+                },
+                "workQueue": {
+                  "workRequestList": [
+                    ""
+                  ]
+                }
+              },
+              {
+                "username": "acc",
+                "password": "acc",
+                "enterprise": {
+                  "@class": "business.Enterprise.AccountingEnt",
+                  "name": "Accounting Unit",
+                  "workQueue": {
+                    "workRequestList": [
+                      ""
+                    ]
+                  },
+                  "employeeDirectory": {
+                    "employeeList": [
+                      ""
+                    ]
+                  },
+                  "userAccountDirectory": {
+                    "userAccountList": [
+                      ""
+                    ]
+                  },
+                  "organizationID": 14,
+                  "enterpriseType": "AccountingEnt",
+                  "organizationDirectory": {
+                    "organizationList": [
+                      ""
+                    ]
+                  }
+                },
+                "role": {
+                  "@class": "business.Role.AccountingAdminRole"
+                },
+                "workQueue": {
+                  "workRequestList": [
+                    ""
+                  ]
+                }
+              },
+              {
+                "username": "emer",
+                "password": "emer",
+                "enterprise": {
+                  "@class": "business.Enterprise.EmergencyEnt",
+                  "@reference": "../../business.UserAccount.UserAccount[8]/enterprise"
+                },
+                "role": {
+                  "@class": "business.Role.EmergencyAdminRole"
+                },
+                "workQueue": {
+                  "workRequestList": [
+                    ""
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "organizationID": 0,
+    "networkList": [
+      {
+        "business.Network.Network": {
+          "name": "EnterpriseNetwork",
+          "enterpriseDirectory": {
+            "enterpriseList": [
+              ""
+            ]
+          }
+        }
+      }
+    ],
+    "enterpriseDirectory": {
+      "enterpriseList": [
+        {
+          "business.Enterprise.ManagementEnt": {
+            "@reference": "../../../userAccountDirectory[2]/userAccountList/business.UserAccount.UserAccount/enterprise"
+          },
+          "business.Enterprise.EquipmentEnt": {
+            "@reference": "../../../userAccountDirectory[2]/userAccountList/business.UserAccount.UserAccount[5]/enterprise"
+          },
+          "business.Enterprise.EmergencyEnt": {
+            "@reference": "../../../userAccountDirectory[2]/userAccountList/business.UserAccount.UserAccount[8]/enterprise"
+          },
+          "business.Enterprise.MedicineEnt": {
+            "@reference": "../../../userAccountDirectory[2]/userAccountList/business.UserAccount.UserAccount[6]/enterprise"
+          },
+          "business.Enterprise.AccountingEnt": {
+            "@reference": "../../../userAccountDirectory[2]/userAccountList/business.UserAccount.UserAccount[9]/enterprise"
+          }
+        }
+      ]
+    },
+    "organizationDirectory": {
+      "organizationList": [
+        {
+          "business.Organization.ReceptionistOrg": {
+            "name": "R1",
+            "workQueue": {
+              "workRequestList": [
+                ""
+              ]
+            },
+            "employeeDirectory": {
+              "employeeList": [
+                ""
+              ]
+            },
+            "userAccountDirectory": {
+              "userAccountList": [
+                ""
+              ]
+            },
+            "organizationID": 1
+          },
+          "business.Organization.DoctorOrg": {
+            "name": "D1",
+            "workQueue": {
+              "workRequestList": [
+                ""
+              ]
+            },
+            "employeeDirectory": {
+              "employeeList": [
+                ""
+              ]
+            },
+            "userAccountDirectory": {
+              "userAccountList": [
+                ""
+              ]
+            },
+            "organizationID": 2
+          },
+          "business.Organization.PatientOrg": {
+            "name": "P1",
+            "workQueue": {
+              "workRequestList": [
+                ""
+              ]
+            },
+            "employeeDirectory": {
+              "employeeList": [
+                ""
+              ]
+            },
+            "userAccountDirectory": {
+              "userAccountList": [
+                ""
+              ]
+            },
+            "organizationID": 3
+          },
+          "business.Organization.EquipmentOrg": {
+            "name": "E1",
+            "workQueue": {
+              "workRequestList": [
+                ""
+              ]
+            },
+            "employeeDirectory": {
+              "employeeList": [
+                ""
+              ]
+            },
+            "userAccountDirectory": {
+              "userAccountList": [
+                ""
+              ]
+            },
+            "organizationID": 4
+          },
+          "business.Organization.MedicineOrg": {
+            "name": "M1",
+            "workQueue": {
+              "workRequestList": [
+                ""
+              ]
+            },
+            "employeeDirectory": {
+              "employeeList": [
+                ""
+              ]
+            },
+            "userAccountDirectory": {
+              "userAccountList": [
+                ""
+              ]
+            },
+            "organizationID": 6,
+            "medList": [
+              ""
+            ]
+          },
+          "business.Organization.AmbulanceOrg": {
+            "name": "A1",
+            "workQueue": {
+              "workRequestList": [
+                ""
+              ]
+            },
+            "employeeDirectory": {
+              "employeeList": [
+                ""
+              ]
+            },
+            "userAccountDirectory": {
+              "userAccountList": [
+                ""
+              ]
+            },
+            "organizationID": 7
+          },
+          "business.Organization.LabOrg": {
+            "name": "L1",
+            "workQueue": {
+              "workRequestList": [
+                {
+                  "business.WorkQueue.LabTestWorkRequest": {
+                    "@reference": "../../../../../../userAccountDirectory[2]/userAccountList/business.UserAccount.UserAccount[3]/workQueue/workRequestList/business.WorkQueue.LabTestWorkRequest"
+                  }
+                }
+              ]
+            },
+            "employeeDirectory": {
+              "employeeList": [
+                ""
+              ]
+            },
+            "userAccountDirectory": {
+              "userAccountList": [
+                ""
+              ]
+            },
+            "organizationID": 5
+          },
+          "business.Organization.EmergencyOrg": {
+            "name": "E2",
+            "workQueue": {
+              "workRequestList": [
+                {
+                  "business.WorkQueue.EmergencyWorkRequest": {
+                    "sender": {
+                      "@reference": "../../../../../../../userAccountDirectory[2]/userAccountList/business.UserAccount.UserAccount[4]"
+                    },
+                    "requestDate": "2023-12-16 19:33:04.255 UTC",
+                    "patient": {
+                      "@reference": "../../../../../../../userAccountDirectory[2]/userAccountList/business.UserAccount.UserAccount[3]/workQueue/workRequestList/business.WorkQueue.LabTestWorkRequest/patient"
+                    },
+                    "emergencyRequestId": "ER537",
+                    "Status": "Sent",
+                    "min": 100,
+                    "max": 999
+                  }
+                }
+              ]
+            },
+            "employeeDirectory": {
+              "employeeList": [
+                ""
+              ]
+            },
+            "userAccountDirectory": {
+              "userAccountList": [
+                ""
+              ]
+            },
+            "organizationID": 9
+          },
+          "business.Organization.BillingOrg": {
+            "name": "B1",
+            "workQueue": {
+              "workRequestList": [
+                {
+                  "business.WorkQueue.BillingWorkRequest": {
+                    "sender": {
+                      "@reference": "../../../../../../../userAccountDirectory[2]/userAccountList/business.UserAccount.UserAccount[5]"
+                    },
+                    "requestDate": "2023-12-16 19:35:01.343 UTC",
+                    "billingRequestId": "BR334",
+                    "equipment": {
+                      "equipmentID": "EQ-664",
+                      "equipmetName": "Ventilator",
+                      "availableQuant": 20,
+                      "desc": "Philips Ventilator",
+                      "cost": 10,
+                      "TotalCost": 200,
+                      "min": 100,
+                      "max": 999
+                    },
+                    "Status": "Completed",
+                    "min": 100,
+                    "max": 999
+                  }
+                }
+              ]
+            },
+            "employeeDirectory": {
+              "employeeList": [
+                ""
+              ]
+            },
+            "userAccountDirectory": {
+              "userAccountList": [
+                ""
+              ]
+            },
+            "organizationID": 8,
+            "funds": 0
+          }
+        }
+      ]
+    },
+    "patientDirectory": {
+      "patientList": [
+        {
+          "business.Stakeholders.Patient": {
+            "@reference": "../../../userAccountDirectory[2]/userAccountList/business.UserAccount.UserAccount[3]/workQueue/workRequestList/business.WorkQueue.LabTestWorkRequest/patient"
+          }
+        }
+      ]
+    },
+    "doctorDirectory": {
+      "doctorList": [
+        {
+          "business.Stakeholders.Doctor": {
+            "@reference": "../../../userAccountDirectory[2]/userAccountList/business.UserAccount.UserAccount[3]/workQueue/workRequestList/business.WorkQueue.LabTestWorkRequest/doctor"
+          }
+        }
+      ]
+    },
+    "ambulanceDirectory": {
+      "ambulanceList": [
+        {
+          "business.Stakeholders.Ambulance": {
+            "driverName": "Ramesh",
+            "ambulanceNumber": 3345,
+            "location": "Roxbury"
+          }
+        }
+      ]
+    },
+    "equipmentList": {
+      "equipmentList": [
+        {
+          "business.Equipment.Equipment": [
+            {
+              "@reference": "../../../organizationDirectory/organizationList/business.Organization.BillingOrg/workQueue/workRequestList/business.WorkQueue.BillingWorkRequest/equipment"
+            },
+            {
+              "equipmentID": "EQ-999",
+              "equipmetName": "monitor1200",
+              "availableQuant": 12,
+              "cost": 1200,
+              "TotalCost": 0,
+              "min": 100,
+              "max": 999
+            }
+          ]
+        }
+      ]
+    },
+    "medicineDirectory": {
+      "medicineList": [
+        {
+          "business.Medication.Medicine": {
+            "medicineName": "Paracetemol",
+            "reorderLevel": 0,
+            "minimumStock": 0,
+            "maximumStock": 0,
+            "expiryDate": "12/23/23",
+            "availQuantity": 5,
+            "purchasePrice": 0,
+            "sellingPrice": 100,
+            "productId": 1,
+            "serialNumber": 0,
+            "requiredQuantity": 0
+          }
+        }
+      ]
+    }
+  }
+}
